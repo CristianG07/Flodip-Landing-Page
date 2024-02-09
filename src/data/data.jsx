@@ -39,7 +39,7 @@ export const about_us = [
   },
 
   {
-    name: 'Juan Garcia',
+    name: 'Jose Montenegro',
     position: 'CTO',
     picture: cto 
   }

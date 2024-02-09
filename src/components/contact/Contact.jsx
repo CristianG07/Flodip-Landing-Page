@@ -1,9 +1,41 @@
+import { useRef } from "react";
 import { fadeIn } from '../../animations/Animations'
 import { ilustration } from '../../assets/img'
 import { Title } from '../Title'
 import { motion } from 'framer-motion'
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from 'react-toastify';
 
 export const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_5gurw56",
+        "template_m4wnvz5",
+        form.current,
+        "ALa-nL2YYJAeMWV6r"
+      )
+      .then(
+        (result) => {
+          toast.success(`Mensaje enviado con exito`, {
+            position: "bottom-left",
+            theme: "dark",
+          });
+        },
+        (err) => {
+          toast.error(`Error mensaje no enviado`, {
+            position: "bottom-left",
+            theme: "light",
+          })
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <section id='contacto'>
       <div className='containers py-28'>
@@ -34,8 +66,8 @@ export const Contact = () => {
           </div>
 
           <motion.form
-            // ref={form}
-            // onSubmit={sendEmail}
+            ref={form}
+            onSubmit={sendEmail}
             initial='hidden'
             variants={fadeIn('left', 0.6)}
             whileInView={'show'}
@@ -46,7 +78,7 @@ export const Contact = () => {
                 <label htmlFor='name'>
                   Nombre Completo<span className='text-red-600'>*</span>
                 </label>
-                <input type='text' name='name' required />
+                <input type='text' name='user_email' required />
               </div>
               <div className='grid'>
                 <label htmlFor='email'>
@@ -56,10 +88,10 @@ export const Contact = () => {
               </div>
             </div>
             <div className='grid'>
-              <label htmlFor='asunto'>
+              <label htmlFor='affair'>
                 Asunto<span className='text-red-600'>*</span>
               </label>
-              <input type='text' name='asunto' required />
+              <input type='text' name='affair' required />
             </div>
             <div className='grid'>
               <label htmlFor='mensaje'>
@@ -68,7 +100,7 @@ export const Contact = () => {
               <textarea
                 rows={8}
                 className='resize-none'
-                name='mensaje'
+                name='message'
                 required
               />
             </div>
@@ -78,7 +110,7 @@ export const Contact = () => {
             >
               Enviar
             </button>
-            {/* <ToastContainer /> */}
+            <ToastContainer />
           </motion.form>
         </div>
       </div>
