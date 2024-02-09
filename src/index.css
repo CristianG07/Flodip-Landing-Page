@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner {
+  background-image: url('./assets/img/banner.png');
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+@layer base {
+  a {
+    @apply cursor-pointer
+  }
+
+  img {
+    @apply select-none object-cover
+  }
+
+  input,
+  textarea {
+    @apply block outline-none w-full rounded-sm border-0 py-4 px-4 text-gray-900 ring-1  ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-primary sm:text-sm sm:leading-6
+  }
+
+  label {
+    @apply text-base md:text-lg font-medium mb-2
+  }
+
+  ::placeholder {
+    @apply text-lg text-text-gray
+  }
+
+  ::selection {
+    @apply bg-primary
+  }
+}
+
+@layer components {
+  .containers {
+    @apply container mx-auto px-5
+  }
+
+  .btn_primary {
+    @apply text-white px-7 py-3 bg-primary rounded-full font-semibold hover:bg-white hover:outline hover:outline-1 hover:outline-primary hover:text-primary duration-700 shadow-md
+  }
+
+  .hover_primary {
+    @apply hover:text-primary duration-700
+  }
+
+  .title {
+    @apply text-3xl md:text-4xl uppercase font-bold text-center text-primary underline underline-offset-8 mb-20
+  }
+
+  .title_footer {
+    @apply text-2xl sm:text-3xl font-bold mb-3
+  }
+
+  .texto_primary {
+    @apply text-sm md:text-base lg:text-lg
+  }
+}
