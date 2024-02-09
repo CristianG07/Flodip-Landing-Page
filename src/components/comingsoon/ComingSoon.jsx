@@ -55,7 +55,7 @@ export const ComingSoon = () => {
               </motion.span>
             </h4>
             <p className="texto_primary">
-              Próximamente anzaremos nuestra aplicación Flodip! En equipo,
+              Próximamente lanzaremos nuestra aplicación Flodip! En equipo,
               estamos trabajando arduamente para ofrecer una experiencia
               excepcional. ¡Estén atentos para descubrir cómo Flodip mejorará y
               transformará la manera de conseguir cargas y mover mercancías!

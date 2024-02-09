@@ -1,5 +1,5 @@
-import ceo from './ceo.jpg'
-import cto from './cto.jpg'
+import ceo from './ceo.png'
+import cto from './cto.png'
 import transportistas from './transporte.svg'
 import mercancia from './mercancia.svg'
 import logo from './logo_flodip.svg'
