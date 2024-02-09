@@ -76,10 +76,10 @@ export const Contact = () => {
           >
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-5'>
               <div className='grid'>
-                <label htmlFor='name'>
+                <label htmlFor='user_name'>
                   Nombre Completo<span className='text-red-600'>*</span>
                 </label>
-                <input type='text' name='user_email' required />
+                <input type='text' name='user_name' required />
               </div>
               <div className='grid'>
                 <label htmlFor='user_email'>
@@ -95,7 +95,7 @@ export const Contact = () => {
               <input type='text' name='affair' required />
             </div>
             <div className='grid'>
-              <label htmlFor='mensaje'>
+              <label htmlFor='message'>
                 Mensaje<span className='text-red-600'>*</span>
               </label>
               <textarea
