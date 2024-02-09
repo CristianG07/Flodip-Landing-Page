@@ -82,10 +82,10 @@ export const Contact = () => {
                 <input type='text' name='user_email' required />
               </div>
               <div className='grid'>
-                <label htmlFor='email'>
+                <label htmlFor='user_email'>
                   Correo electrónico<span className='text-red-600'>*</span>
                 </label>
-                <input type='email' name='email' className='w-full' required />
+                <input type='email' name='user_email' className='w-full' required />
               </div>
             </div>
             <div className='grid'>
