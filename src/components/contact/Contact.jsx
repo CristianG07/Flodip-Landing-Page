@@ -5,6 +5,7 @@ import { Title } from '../Title'
 import { motion } from 'framer-motion'
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 export const Contact = () => {
   const form = useRef();
@@ -14,7 +15,7 @@ export const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_5gurw56",
+        "service_xvhchud",
         "template_m4wnvz5",
         form.current,
         "ALa-nL2YYJAeMWV6r"
