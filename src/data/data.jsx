@@ -32,15 +32,18 @@ export const social_media = [
 ]
 
 export const about_us = [
-  {
-    name: 'Santiago Franco',
-    position: 'CEO',
-    picture: ceo
-  },
+  // {
+  //   name: 'Santiago Franco',
+  //   position: 'CEO',
+  //   picture: ceo
+  // },
 
+  // {
+  //   name: 'Jose Montenegro',
+  //   position: 'CTO',
+  //   picture: cto 
+  // },
   {
-    name: 'Jose Montenegro',
-    position: 'CTO',
-    picture: cto 
+    mensaje: 'Somos un aplicativo móvil enfocado en la creación de un ecosistema amigable y productivo entre transportistas con dueños de mercancías. Buscando con ello hacer más productivo al sector de transporte, beneficiando a los transportistas obteniendo cargas más rápidas, seguras y bien remuneradas.', 
   }
 ]
